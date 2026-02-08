@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>バイオハザード 歴史年表</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>BIOHAZARD HISTORY</h1>
+        <p>恐怖の歴史を遡る</p>
+    </header>
+
+    <div class="timeline" id="timeline">
+        <!-- JSで動的に追加されます -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
