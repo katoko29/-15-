@@ -3,65 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>バイオハザード 歴史年表</title>
+    <title>RESIDENT EVIL | Portal</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>BIOHAZARD HISTORY</h1>
-        <p>恐怖の歴史を遡る</p>
+        <div class="logo">BIOHAZARD</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#" id="warning-btn">System Check</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <div class="timeline" id="timeline">
-        <!-- JSで動的に追加されます -->
-    </div>
+    <main>
+        <section id="hero">
+            <h1 id="glitch-text" data-text="ENTER THE SURVIVAL HORROR">ENTER THE SURVIVAL HORROR</h1>
+            <p>絶望を生き抜け。</p>
+        </section>
+
+        <section id="about">
+            <h2>ABOUT</h2>
+            <p>1996年の第1作発売以来、サバイバルホラーというジャンルを確立した「バイオハザード」シリーズ。アンブレラ社が生み出したT-ウィルスによる惨劇から、世界を救う戦いが始まる。</p>
+        </section>
+
+        <section id="characters">
+            <h2>CHARACTERS</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Chris Redfield</h3>
+                    <p>元S.T.A.R.S.隊員。数々のバイオテロと戦ってきた伝説の男。</p>
+                </div>
+                <div class="card">
+                    <h3>Leon S. Kennedy</h3>
+                    <p>ラクーン市警の新米警官から、大統領直属のエージェントへ。</p>
+                </div>
+                <div class="card">
+                    <h3>Jill Valentine</h3>
+                    <p>鍵開けのスペシャリスト。バイオテロ封じ込めの第一人者。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 UMBRELLA CORPORATION - Science for a Comfortable Life</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-body {
-    background-color: #0d0d0d;
-    color: #e0e0e0;
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 20px;
-}
-header { text-align: center; border-bottom: 2px solid #8b0000; margin-bottom: 40px; }
-h1 { color: #ff0000; letter-spacing: 5px; }
-
-.timeline {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-}
-.event {
-    padding: 20px;
-    background: #1a1a1a;
-    border-left: 5px solid #8b0000;
-    margin-bottom: 20px;
-    transition: 0.3s;
-    cursor: pointer;
-}
-.event:hover { background: #333; transform: scale(1.02); }
-.year { font-weight: bold; color: #ff4500; font-size: 1.2em; }
-.title { font-size: 1.5em; margin: 10px 0; }
-const historyData = [
-    { year: "1996", title: "バイオハザード", desc: "全ての始まり。洋館事件が発生。" },
-    { year: "1998", title: "バイオハザード2 / 3", desc: "ラクーンシティ崩壊。T-ウィルスの脅威が街を覆う。" },
-    { year: "2005", title: "バイオハザード4", desc: "レオンが欧州へ。寄生体「プラーガ」との戦い。" },
-    { year: "2017", title: "バイオハザード7", desc: "主観視点への刷新。ベイカー邸の惨劇。" },
-    { year: "2021", title: "バイオハザード ヴィレッジ", desc: "イーサンの物語の完結。マザー・ミランダとの決戦。" }
-];
-
-const timeline = document.getElementById('timeline');
-
-historyData.forEach(item => {
-    const div = document.createElement('div');
-    div.className = 'event';
-    div.innerHTML = `
-        <div class="year">${item.year}</div>
-        <div class="title">${item.title}</div>
-        <p>${item.desc}</p>
-    `;
-    timeline.appendChild(div);
-});
